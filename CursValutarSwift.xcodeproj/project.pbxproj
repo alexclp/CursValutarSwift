@@ -16,6 +16,7 @@
 		0F6B4F061BD9273B007C35FA /* RateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6B4F051BD9273B007C35FA /* RateTableViewCell.swift */; };
 		0F6B4F081BD92D79007C35FA /* RatesFullNames.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F6B4F071BD92D79007C35FA /* RatesFullNames.plist */; };
 		0F6B4F0A1BD934A6007C35FA /* BNREvolutionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6B4F091BD934A6007C35FA /* BNREvolutionViewController.swift */; };
+		0F994F751ECA211B009FC64A /* BNRConverterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F994F741ECA211B009FC64A /* BNRConverterViewController.swift */; };
 		0FAC8D111ECA0CC100F83463 /* SWXMLHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F3708F11ECA074900032AA1 /* SWXMLHash.framework */; };
 		0FAC8D121ECA0CC100F83463 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F3708F31ECA091300032AA1 /* Alamofire.framework */; };
 		0FF4584F1BCECD640028A916 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF4584E1BCECD640028A916 /* AppDelegate.swift */; };
@@ -80,6 +81,7 @@
 		0F6B4F051BD9273B007C35FA /* RateTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateTableViewCell.swift; sourceTree = "<group>"; };
 		0F6B4F071BD92D79007C35FA /* RatesFullNames.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RatesFullNames.plist; sourceTree = "<group>"; };
 		0F6B4F091BD934A6007C35FA /* BNREvolutionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BNREvolutionViewController.swift; sourceTree = "<group>"; };
+		0F994F741ECA211B009FC64A /* BNRConverterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BNRConverterViewController.swift; sourceTree = "<group>"; };
 		0FF4584B1BCECD640028A916 /* CursValutarSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CursValutarSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FF4584E1BCECD640028A916 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FF458501BCECD640028A916 /* BNRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BNRViewController.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 			children = (
 				0FF458501BCECD640028A916 /* BNRViewController.swift */,
 				0F6B4F091BD934A6007C35FA /* BNREvolutionViewController.swift */,
+				0F994F741ECA211B009FC64A /* BNRConverterViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				0FF4587D1BCEF9BD0028A916 /* Networking.swift in Sources */,
 				0F5B4D151BD199690053F5B9 /* RatesDBModel.xcdatamodeld in Sources */,
 				0F6B4F061BD9273B007C35FA /* RateTableViewCell.swift in Sources */,
+				0F994F751ECA211B009FC64A /* BNRConverterViewController.swift in Sources */,
 				0F5A9F3D1CAC2A5600D1568C /* Currency.swift in Sources */,
 				0FF458511BCECD640028A916 /* BNRViewController.swift in Sources */,
 				0FF4584F1BCECD640028A916 /* AppDelegate.swift in Sources */,

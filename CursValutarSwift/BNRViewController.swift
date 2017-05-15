@@ -25,12 +25,10 @@ class BNRViewController: UIViewController {
 		
 		networking.getBNRRates { (success, parsed) in
 			if success == true {
-				
 				if let rates = parsed {
 					self.bnrrates = rates
 					self.tableView?.reloadData()
 				}
-				
 			} else {
 				print("Error when getting parsed data")
 			}
