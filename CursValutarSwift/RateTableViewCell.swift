@@ -9,7 +9,7 @@
 import UIKit
 
 class RateTableViewCell: UITableViewCell {
-	
+
 	@IBOutlet weak var codeLabel: UILabel?
 	@IBOutlet weak var rateFlag: UIImageView?
 	@IBOutlet weak var rateValue: UILabel?

@@ -9,13 +9,12 @@
 import Foundation
 
 class PersistanceHelper {
-	
-	class func fetchFullNames() -> [String: String] {
-		var dict: NSDictionary?
+	class func fetchFullNames() -> [String: String]? {
 		if let path = Bundle.main.path(forResource: "RatesFullNames", ofType: "plist") {
-			dict = NSDictionary(contentsOfFile: path)
+			if let dic = NSDictionary(contentsOfFile: path) as? [String: String] {
+				return dic
+			}
 		}
-		
-		return dict as! [String: String]
+		return nil
 	}
 }
