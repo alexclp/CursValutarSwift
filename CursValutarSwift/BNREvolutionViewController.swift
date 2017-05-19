@@ -12,11 +12,8 @@ class BNREvolutionViewController: UIViewController {
 
 	let networking = Networking()
 	var selectedCurrency: String = ""
-	
+
     override func viewDidLoad() {
         super.viewDidLoad()
-		
     }
-
-	
 }
