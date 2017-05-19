@@ -40,7 +40,6 @@ class BNRConverterViewController: UIViewController {
 		collectionView.collectionViewLayout = layout
 
 		if let tabBar = tabBarController?.tabBar {
-//			let adjustForTabbarInsets = UIEdgeInsetsMake(0, 0, tabBar.frame.height, 0)
 			let adjustForTabbarInsets = UIEdgeInsets(top: 0, left: 0, bottom: tabBar.frame.height, right: 0)
 			collectionView.contentInset = adjustForTabbarInsets
 			collectionView.scrollIndicatorInsets = adjustForTabbarInsets
@@ -83,7 +82,6 @@ extension BNRConverterViewController: UICollectionViewDataSource {
 
 		let label = UILabel(frame: cell.bounds)
 		label.textAlignment = .center
-//		label.font = UIFont.boldSystemFont(ofSize: 20)
 		label.font = UIFont.systemFont(ofSize: 30, weight: UIFontWeightLight)
 		label.text = collectionViewLabelsText[indexPath.row]
 		cell.addSubview(label)
