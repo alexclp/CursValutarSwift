@@ -21,6 +21,12 @@ class BNRConverterViewController: UIViewController {
 	fileprivate let collectionViewLabelsText = ["1", "2", "3", "4", "5", "6", "7", "8", "9", ".", "0", "< - >"]
 
 	@IBOutlet weak var collectionView: UICollectionView!
+	@IBOutlet weak var firstCurrencyImageView: UIImageView!
+	@IBOutlet weak var firstCurrencyTextField: UITextField!
+	@IBOutlet weak var firstCurrencyCodeLabel: UILabel!
+	@IBOutlet weak var secondCurrencyImageView: UIImageView!
+	@IBOutlet weak var secondCurrencyTextField: UITextField!
+	@IBOutlet weak var secondCurrencyCodeLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +36,8 @@ class BNRConverterViewController: UIViewController {
 
 		self.view.backgroundColor = UIColor.hexStringToUIColor(hex: "DAC2AA")
 		collectionView.backgroundColor = UIColor.hexStringToUIColor(hex: "DAC2AA")
+		makeImageViewRound(imageView: firstCurrencyImageView)
+		makeImageViewRound(imageView: secondCurrencyImageView)
     }
 
 	fileprivate func configureCollectionViewLayout() {
@@ -44,6 +52,13 @@ class BNRConverterViewController: UIViewController {
 			collectionView.contentInset = adjustForTabbarInsets
 			collectionView.scrollIndicatorInsets = adjustForTabbarInsets
 		}
+	}
+
+	fileprivate func makeImageViewRound(imageView: UIImageView) {
+		imageView.layer.cornerRadius = firstCurrencyImageView.frame.size.height / 2
+		imageView.layer.masksToBounds = true
+		imageView.contentMode = UIViewContentMode.scaleAspectFill
+		imageView.clipsToBounds = true
 	}
 }
 

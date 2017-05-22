@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ctS-65-o7u">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ctS-65-o7u">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -205,9 +205,9 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EUR" translatesAutoresizingMaskIntoConstraints="NO" id="Xnf-T8-V33">
-                                <rect key="frame" x="8" y="42" width="72" height="42"/>
+                                <rect key="frame" x="16" y="38" width="50" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="72" id="0pM-U0-QBJ"/>
+                                    <constraint firstAttribute="width" constant="50" id="0pM-U0-QBJ"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EUR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZP-7T-1ES">
@@ -219,9 +219,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="USD" translatesAutoresizingMaskIntoConstraints="NO" id="aer-FG-vvb">
-                                <rect key="frame" x="8" y="127" width="72" height="42"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lnb-ng-7Cm">
                                 <rect key="frame" x="88" y="127" width="121" height="42"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="34"/>
@@ -234,29 +231,32 @@
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="35"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
                             </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="USD" translatesAutoresizingMaskIntoConstraints="NO" id="aer-FG-vvb">
+                                <rect key="frame" x="16" y="123" width="50" height="50"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="aer-FG-vvb" firstAttribute="top" secondItem="Lnb-ng-7Cm" secondAttribute="top" id="0BV-SZ-xeY"/>
-                            <constraint firstItem="pZP-7T-1ES" firstAttribute="leading" secondItem="Xnf-T8-V33" secondAttribute="trailing" constant="8" symbolic="YES" id="1Q0-Gy-SYX"/>
-                            <constraint firstItem="Xnf-T8-V33" firstAttribute="top" secondItem="pZP-7T-1ES" secondAttribute="top" id="2LB-DX-dYm"/>
+                            <constraint firstItem="aer-FG-vvb" firstAttribute="top" secondItem="Lnb-ng-7Cm" secondAttribute="top" constant="-4" id="0BV-SZ-xeY"/>
+                            <constraint firstItem="pZP-7T-1ES" firstAttribute="leading" secondItem="Xnf-T8-V33" secondAttribute="trailing" constant="22" id="1Q0-Gy-SYX"/>
+                            <constraint firstItem="Xnf-T8-V33" firstAttribute="top" secondItem="pZP-7T-1ES" secondAttribute="top" constant="-4" id="2LB-DX-dYm"/>
                             <constraint firstItem="lyn-27-4Y7" firstAttribute="trailing" secondItem="2m2-5B-MJD" secondAttribute="trailing" id="6OC-rL-XZM"/>
-                            <constraint firstItem="aer-FG-vvb" firstAttribute="top" secondItem="Xnf-T8-V33" secondAttribute="bottom" constant="43" id="82e-NA-gVD"/>
+                            <constraint firstItem="aer-FG-vvb" firstAttribute="top" secondItem="Xnf-T8-V33" secondAttribute="bottom" constant="35" id="82e-NA-gVD"/>
                             <constraint firstItem="Xnf-T8-V33" firstAttribute="leading" secondItem="aer-FG-vvb" secondAttribute="leading" id="A3K-ia-8od"/>
                             <constraint firstItem="6Vi-0f-DmB" firstAttribute="top" secondItem="Lnb-ng-7Cm" secondAttribute="bottom" constant="8" symbolic="YES" id="B5j-aJ-NCQ"/>
                             <constraint firstItem="pZP-7T-1ES" firstAttribute="leading" secondItem="Lnb-ng-7Cm" secondAttribute="leading" id="Cvx-Rc-jjR"/>
                             <constraint firstItem="2m2-5B-MJD" firstAttribute="leading" secondItem="Lnb-ng-7Cm" secondAttribute="trailing" constant="8" symbolic="YES" id="FhF-Rx-ipG"/>
                             <constraint firstAttribute="trailing" secondItem="6Vi-0f-DmB" secondAttribute="trailing" id="Plu-mv-tfM"/>
-                            <constraint firstItem="Xnf-T8-V33" firstAttribute="leading" secondItem="V6g-Wz-xqc" secondAttribute="leadingMargin" constant="-8" id="T3P-cG-13h"/>
+                            <constraint firstItem="Xnf-T8-V33" firstAttribute="leading" secondItem="V6g-Wz-xqc" secondAttribute="leadingMargin" id="T3P-cG-13h"/>
                             <constraint firstItem="pZP-7T-1ES" firstAttribute="baseline" secondItem="lyn-27-4Y7" secondAttribute="baseline" id="WtP-RH-oKj"/>
                             <constraint firstItem="pZP-7T-1ES" firstAttribute="top" secondItem="lyn-27-4Y7" secondAttribute="top" id="XvI-kR-u20"/>
-                            <constraint firstItem="Lnb-ng-7Cm" firstAttribute="leading" secondItem="aer-FG-vvb" secondAttribute="trailing" constant="8" symbolic="YES" id="YWp-nI-m1R"/>
+                            <constraint firstItem="Lnb-ng-7Cm" firstAttribute="leading" secondItem="aer-FG-vvb" secondAttribute="trailing" constant="22" id="YWp-nI-m1R"/>
                             <constraint firstItem="Lnb-ng-7Cm" firstAttribute="baseline" secondItem="2m2-5B-MJD" secondAttribute="baseline" id="ams-zN-usu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lyn-27-4Y7" secondAttribute="trailing" constant="-8" id="bJL-lU-Nga"/>
-                            <constraint firstItem="Xnf-T8-V33" firstAttribute="bottom" secondItem="pZP-7T-1ES" secondAttribute="bottom" id="c0G-Ds-sze"/>
+                            <constraint firstItem="Xnf-T8-V33" firstAttribute="bottom" secondItem="pZP-7T-1ES" secondAttribute="bottom" constant="4" id="c0G-Ds-sze"/>
                             <constraint firstItem="lyn-27-4Y7" firstAttribute="leading" secondItem="pZP-7T-1ES" secondAttribute="trailing" constant="8" symbolic="YES" id="hC9-BH-kH7"/>
-                            <constraint firstItem="6Vi-0f-DmB" firstAttribute="top" secondItem="aer-FG-vvb" secondAttribute="bottom" constant="8" symbolic="YES" id="kA8-Fg-xRH"/>
-                            <constraint firstItem="Xnf-T8-V33" firstAttribute="top" secondItem="DfI-3H-DEZ" secondAttribute="bottom" constant="22" id="lTP-CR-Iss"/>
+                            <constraint firstItem="6Vi-0f-DmB" firstAttribute="top" secondItem="aer-FG-vvb" secondAttribute="bottom" constant="4" id="kA8-Fg-xRH"/>
+                            <constraint firstItem="Xnf-T8-V33" firstAttribute="top" secondItem="DfI-3H-DEZ" secondAttribute="bottom" constant="18" id="lTP-CR-Iss"/>
                             <constraint firstItem="Lnb-ng-7Cm" firstAttribute="top" secondItem="2m2-5B-MJD" secondAttribute="top" id="m18-HF-UB2"/>
                             <constraint firstItem="lyn-27-4Y7" firstAttribute="leading" secondItem="2m2-5B-MJD" secondAttribute="leading" id="pA6-IU-fbb"/>
                             <constraint firstItem="6Vi-0f-DmB" firstAttribute="bottom" secondItem="z5P-wc-pFK" secondAttribute="top" id="qNg-jY-tGc"/>
@@ -266,6 +266,12 @@
                     <tabBarItem key="tabBarItem" title="Convertor" id="Lp1-3R-KQn"/>
                     <connections>
                         <outlet property="collectionView" destination="6Vi-0f-DmB" id="kHM-k6-5ea"/>
+                        <outlet property="firstCurrencyCodeLabel" destination="pZP-7T-1ES" id="6Yk-bq-LbK"/>
+                        <outlet property="firstCurrencyImageView" destination="Xnf-T8-V33" id="yUx-PM-yX6"/>
+                        <outlet property="firstCurrencyTextField" destination="lyn-27-4Y7" id="V5S-qs-J3u"/>
+                        <outlet property="secondCurrencyCodeLabel" destination="Lnb-ng-7Cm" id="L1l-fj-RZK"/>
+                        <outlet property="secondCurrencyImageView" destination="aer-FG-vvb" id="igb-gO-3KA"/>
+                        <outlet property="secondCurrencyTextField" destination="2m2-5B-MJD" id="5XE-ZI-Gwg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qHi-WT-Khi" userLabel="First Responder" sceneMemberID="firstResponder"/>
