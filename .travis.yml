@@ -5,4 +5,5 @@ xcode_scheme: CursValutarSwift
 before_install:
   - brew update
   - carthage bootstrap --verbose
+install: carthage update --platform iOS
 script: xctool -scheme CursValutarSwift run-tests -test-sdk iphonesimulator10.3
