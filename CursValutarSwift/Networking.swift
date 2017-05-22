@@ -21,13 +21,11 @@ fileprivate func < <T: Comparable>(lhs: T?, rhs: T?) -> Bool {
 }
 
 class Networking {
-	let parser = Parser()
-
 	func getBNRRates(_ completionClosure: @escaping (_ success: Bool, _ parsed: [Currency]?) -> Void) {
 		Alamofire.request("http://www.bnr.ro/nbrfxrates.xml", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil)
 			.validate() .responseString { response in
 				if let dataToParse = response.data {
-					var parsedData: [Currency] = self.parser.parseBNRRates(dataToParse)
+					var parsedData = Parser.shared.parseBNRRates(dataToParse) as [Currency]
 					parsedData.sort(by: { (first, second) -> Bool in
 						first.code < second.code
 					})
