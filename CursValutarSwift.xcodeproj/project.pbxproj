@@ -619,10 +619,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
-					/Users/alexclp/Developer/iOS,
-					Projects/CursValutarSwift,
-				);
 				INFOPLIST_FILE = CursValutarSwiftTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexandruclapa.CursValutarSwiftTests;
