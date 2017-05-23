@@ -11,17 +11,9 @@ import CoreData
 import SWXMLHash
 
 class Parser {
+	private init() { }
 
-	func formatDate(_ dateString: String, format: String) -> String {
-		let dateFormatter = DateFormatter()
-		dateFormatter.dateFormat = format
-		let date = dateFormatter.date(from: dateString) as Date!
-		dateFormatter.dateStyle = DateFormatter.Style.short
-		dateFormatter.timeStyle = .short
-		let toReturn = dateFormatter.string(from: date!)
-
-		return toReturn
-	}
+	static let shared = Parser()
 
 	func parseBNRRates(_ xmlToParse: Data) -> [Currency] {
 		var toReturn = [Currency]()

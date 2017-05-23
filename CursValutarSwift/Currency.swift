@@ -16,4 +16,8 @@ class Currency {
 	var code: String?
 	var multiplier: String?
 	var exchangeRate: ExchangeRate?
+
+	public var description: String {
+		return "\(fullName ?? "N/A") (\(code ?? "N/A")): \(String(describing: exchangeRate))"
+	}
 }
