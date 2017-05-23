@@ -19,6 +19,7 @@ class BNRConverterViewController: UIViewController {
 	fileprivate let kCellSpacingRight: CGFloat = 0.5
 
 	fileprivate let collectionViewLabelsText = ["1", "2", "3", "4", "5", "6", "7", "8", "9", ".", "0", "< - >"]
+	fileprivate var selectedTag = -1
 
 	@IBOutlet weak var collectionView: UICollectionView!
 	@IBOutlet weak var firstCurrencyImageView: UIImageView!
@@ -38,6 +39,13 @@ class BNRConverterViewController: UIViewController {
 		collectionView.backgroundColor = UIColor.hexStringToUIColor(hex: "DAC2AA")
 		makeImageViewRound(imageView: firstCurrencyImageView)
 		makeImageViewRound(imageView: secondCurrencyImageView)
+
+		let firstGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.presentCurrencyChooserController(sender:)))
+		firstCurrencyCodeLabel.isUserInteractionEnabled = true
+		firstCurrencyCodeLabel.addGestureRecognizer(firstGestureRecognizer)
+		let secondGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.presentCurrencyChooserController(sender:)))
+		secondCurrencyCodeLabel.isUserInteractionEnabled = true
+		secondCurrencyCodeLabel.addGestureRecognizer(secondGestureRecognizer)
     }
 
 	fileprivate func configureCollectionViewLayout() {
@@ -59,6 +67,32 @@ class BNRConverterViewController: UIViewController {
 		imageView.layer.masksToBounds = true
 		imageView.contentMode = UIViewContentMode.scaleAspectFill
 		imageView.clipsToBounds = true
+	}
+
+	func currencyLabelTapped(sender: UITapGestureRecognizer) {
+		if sender.view?.tag == 0 {
+			print("First label pressed")
+			selectedTag = 0
+			self.performSegue(withIdentifier: "showCurrencyChooserSegue", sender: self)
+		} else if sender.view?.tag == 1 {
+			print("Second label pressed")
+			selectedTag = 1
+			self.performSegue(withIdentifier: "showCurrencyChooserSegue", sender: self)
+		}
+	}
+
+	func presentCurrencyChooserController(sender: UITapGestureRecognizer) {
+		let storyboard = UIStoryboard(name: "Main", bundle: Bundle(for: type(of: self)))
+		if let currencyChooserController = storyboard.instantiateViewController(withIdentifier: "CurrencyChooserVC") as? CurrencyChooserTableViewController {
+			let navController = UINavigationController.init(rootViewController: currencyChooserController)
+			currencyChooserController.delegate = self
+			if let label = sender.view {
+				currencyChooserController.senderTag = label.tag
+				present(navController, animated: true, completion: nil)
+			} else {
+				print("The tap gesture does not have a parent view!!")
+			}
+		}
 	}
 }
 
@@ -102,5 +136,22 @@ extension BNRConverterViewController: UICollectionViewDataSource {
 		cell.addSubview(label)
 
 		return cell
+	}
+}
+
+extension BNRConverterViewController: CurrencyChooserDelegate {
+	func currencyLabel(withTag tag: Int, didFinishChoosingCurrency currency: String) {
+		print("Currency code chosen: \(currency)")
+		if tag == 0 {
+			firstCurrencyCodeLabel.text = currency
+			if let image = UIImage(named: currency) {
+				firstCurrencyImageView.image = image
+			}
+		} else if tag == 1 {
+			secondCurrencyCodeLabel.text = currency
+			if let image = UIImage(named: currency) {
+				secondCurrencyImageView.image = image
+			}
+		}
 	}
 }
