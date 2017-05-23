@@ -1,8 +1,6 @@
 
 # Created by https://www.gitignore.io/api/macos,swift,xcode,carthage
 
-CursValutarSwift.xcodeproj/project.xcworkspace/xcuserdata/alexclp.xcuserdatad/UserInterfaceState.xcuserstate
-
 ### Carthage ###
 # Carthage - A simple, decentralized dependency manager for Cocoa
 Carthage/Checkouts/
@@ -123,3 +121,12 @@ fastlane/test_output
 /*.gcno
 
 # End of https://www.gitignore.io/api/macos,swift,xcode,carthage
+
+# Xcode
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcuserstate
+project.xcworkspace/
+xcuserdata/
