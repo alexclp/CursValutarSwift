@@ -26,17 +26,17 @@ class Parser {
 
 			for code in currencyCodes {
 
-				for cube in cubes {
+				for cube in cubes.all {
 
 					let date = cubes.element?.allAttributes["date"]?.text
 
-					for rate in cube["Rate"] where rate.element?.allAttributes["currency"]?.text == code {
+					for rate in cube["Rate"].all where rate.element?.allAttributes["currency"]?.text == code {
 						let currency: Currency = Currency()
 						currency.date = date
 						currency.code = code
 						currency.fullName = fullNames["code"]
 
-						let value = rate.element?.text!
+						let value = rate.element?.text
 						currency.conversionRate = value
 
 						if let multiplier = rate.element?.allAttributes["multiplier"]?.text {
