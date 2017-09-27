@@ -82,7 +82,7 @@ extension BNRConverterViewController: UICollectionViewDataSource {
 
 		let label = UILabel(frame: cell.bounds)
 		label.textAlignment = .center
-		label.font = UIFont.systemFont(ofSize: 30, weight: UIFontWeightLight)
+		label.font = UIFont.systemFont(ofSize: 30, weight: UIFont.Weight.light)
 		label.text = collectionViewLabelsText[indexPath.row]
 		cell.addSubview(label)
 
