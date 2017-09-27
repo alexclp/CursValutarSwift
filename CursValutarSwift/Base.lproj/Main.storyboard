@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ctS-65-o7u">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ctS-65-o7u">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -175,103 +175,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6Vi-0f-DmB">
-                                <rect key="frame" x="0.0" y="177" width="375" height="441"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" selectionStyle="default" indentationWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="j9j-EI-Ipz">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="j9j-EI-Ipz" id="gPt-ql-Qea">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <inset key="separatorInset" minX="500" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableViewCell>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="heK-X8-ofs">
+                                <rect key="frame" x="0.0" y="80" width="375" height="538"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Svv-Cm-dnO">
-                                    <size key="itemSize" width="0.0" height="0.0"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="buttonCell" id="0wc-A8-rxs">
-                                        <rect key="frame" x="187.5" y="0.0" width="0.0" height="0.0"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </view>
-                                    </collectionViewCell>
-                                </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="fhc-Ie-QHQ" id="cyI-LN-ZhM"/>
-                                    <outlet property="delegate" destination="fhc-Ie-QHQ" id="EWm-gu-Uxk"/>
-                                </connections>
-                            </collectionView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1.4242" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lyn-27-4Y7">
-                                <rect key="frame" x="217" y="42" width="150" height="42"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="35"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
-                            </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EUR" translatesAutoresizingMaskIntoConstraints="NO" id="Xnf-T8-V33">
-                                <rect key="frame" x="16" y="38" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="0pM-U0-QBJ"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alege" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZP-7T-1ES">
-                                <rect key="frame" x="88" y="42" width="121" height="42"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="121" id="y30-Sn-zmN"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="34"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alege" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lnb-ng-7Cm">
-                                <rect key="frame" x="88" y="127" width="121" height="42"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="34"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1.4242" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2m2-5B-MJD">
-                                <rect key="frame" x="217" y="127" width="150" height="42"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="35"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
-                            </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EUR" translatesAutoresizingMaskIntoConstraints="NO" id="aer-FG-vvb">
-                                <rect key="frame" x="16" y="123" width="50" height="50"/>
-                            </imageView>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="aer-FG-vvb" firstAttribute="top" secondItem="Lnb-ng-7Cm" secondAttribute="top" constant="-4" id="0BV-SZ-xeY"/>
-                            <constraint firstItem="pZP-7T-1ES" firstAttribute="leading" secondItem="Xnf-T8-V33" secondAttribute="trailing" constant="22" id="1Q0-Gy-SYX"/>
-                            <constraint firstItem="Xnf-T8-V33" firstAttribute="top" secondItem="pZP-7T-1ES" secondAttribute="top" constant="-4" id="2LB-DX-dYm"/>
-                            <constraint firstItem="lyn-27-4Y7" firstAttribute="trailing" secondItem="2m2-5B-MJD" secondAttribute="trailing" id="6OC-rL-XZM"/>
-                            <constraint firstItem="aer-FG-vvb" firstAttribute="top" secondItem="Xnf-T8-V33" secondAttribute="bottom" constant="35" id="82e-NA-gVD"/>
-                            <constraint firstItem="Xnf-T8-V33" firstAttribute="leading" secondItem="aer-FG-vvb" secondAttribute="leading" id="A3K-ia-8od"/>
-                            <constraint firstItem="6Vi-0f-DmB" firstAttribute="top" secondItem="Lnb-ng-7Cm" secondAttribute="bottom" constant="8" symbolic="YES" id="B5j-aJ-NCQ"/>
-                            <constraint firstItem="pZP-7T-1ES" firstAttribute="leading" secondItem="Lnb-ng-7Cm" secondAttribute="leading" id="Cvx-Rc-jjR"/>
-                            <constraint firstItem="2m2-5B-MJD" firstAttribute="leading" secondItem="Lnb-ng-7Cm" secondAttribute="trailing" constant="8" symbolic="YES" id="FhF-Rx-ipG"/>
-                            <constraint firstAttribute="trailing" secondItem="6Vi-0f-DmB" secondAttribute="trailing" id="Plu-mv-tfM"/>
-                            <constraint firstItem="Xnf-T8-V33" firstAttribute="leading" secondItem="V6g-Wz-xqc" secondAttribute="leadingMargin" id="T3P-cG-13h"/>
-                            <constraint firstItem="pZP-7T-1ES" firstAttribute="baseline" secondItem="lyn-27-4Y7" secondAttribute="baseline" id="WtP-RH-oKj"/>
-                            <constraint firstItem="pZP-7T-1ES" firstAttribute="top" secondItem="lyn-27-4Y7" secondAttribute="top" id="XvI-kR-u20"/>
-                            <constraint firstItem="Lnb-ng-7Cm" firstAttribute="leading" secondItem="aer-FG-vvb" secondAttribute="trailing" constant="22" id="YWp-nI-m1R"/>
-                            <constraint firstItem="Lnb-ng-7Cm" firstAttribute="baseline" secondItem="2m2-5B-MJD" secondAttribute="baseline" id="ams-zN-usu"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="lyn-27-4Y7" secondAttribute="trailing" constant="-8" id="bJL-lU-Nga"/>
-                            <constraint firstItem="Xnf-T8-V33" firstAttribute="bottom" secondItem="pZP-7T-1ES" secondAttribute="bottom" constant="4" id="c0G-Ds-sze"/>
-                            <constraint firstItem="lyn-27-4Y7" firstAttribute="leading" secondItem="pZP-7T-1ES" secondAttribute="trailing" constant="8" symbolic="YES" id="hC9-BH-kH7"/>
-                            <constraint firstItem="6Vi-0f-DmB" firstAttribute="top" secondItem="aer-FG-vvb" secondAttribute="bottom" constant="4" id="kA8-Fg-xRH"/>
-                            <constraint firstItem="Xnf-T8-V33" firstAttribute="top" secondItem="DfI-3H-DEZ" secondAttribute="bottom" constant="18" id="lTP-CR-Iss"/>
-                            <constraint firstItem="Lnb-ng-7Cm" firstAttribute="top" secondItem="2m2-5B-MJD" secondAttribute="top" id="m18-HF-UB2"/>
-                            <constraint firstItem="lyn-27-4Y7" firstAttribute="leading" secondItem="2m2-5B-MJD" secondAttribute="leading" id="pA6-IU-fbb"/>
-                            <constraint firstItem="6Vi-0f-DmB" firstAttribute="bottom" secondItem="z5P-wc-pFK" secondAttribute="top" id="qNg-jY-tGc"/>
-                            <constraint firstItem="6Vi-0f-DmB" firstAttribute="leading" secondItem="V6g-Wz-xqc" secondAttribute="leading" id="uWv-sk-T7q"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Convertor" id="Lp1-3R-KQn"/>
                     <connections>
-                        <outlet property="collectionView" destination="6Vi-0f-DmB" id="kHM-k6-5ea"/>
-                        <outlet property="firstCurrencyCodeLabel" destination="pZP-7T-1ES" id="6Yk-bq-LbK"/>
-                        <outlet property="firstCurrencyImageView" destination="Xnf-T8-V33" id="yUx-PM-yX6"/>
-                        <outlet property="firstCurrencyTextField" destination="lyn-27-4Y7" id="V5S-qs-J3u"/>
-                        <outlet property="secondCurrencyCodeLabel" destination="Lnb-ng-7Cm" id="L1l-fj-RZK"/>
-                        <outlet property="secondCurrencyImageView" destination="aer-FG-vvb" id="igb-gO-3KA"/>
-                        <outlet property="secondCurrencyTextField" destination="2m2-5B-MJD" id="5XE-ZI-Gwg"/>
                         <segue destination="6fo-eU-nIt" kind="presentation" identifier="showCurrencyChooserSegue" id="0W1-4b-ytc"/>
                     </connections>
                 </viewController>
@@ -324,7 +246,4 @@
             <point key="canvasLocation" x="1348" y="931"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="EUR" width="277" height="182"/>
-    </resources>
 </document>
